@@ -1,0 +1,29 @@
+{
+  "siteName": {
+    "value": "spacepants"
+  },
+  "hostingPlanName": {
+    "value": "spacepants"
+  },
+  "siteLocation": {
+    "value": "Australia East"
+  },
+  "sku": {
+    "value": "Free"
+  },
+  "workerSize": {
+    "value": "0"
+  },
+  "siteMode": {
+    "value": "Limited"
+  },
+  "computeMode": {
+    "value": "0"
+  },
+  "subscriptionId": {
+    "value": "ba77a209-0299-4556-82df-dd946b78ce2e"
+  },
+  "resourceGroup": {
+    "value": "spacepants"
+  }
+}
