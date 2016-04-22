@@ -66,6 +66,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\main.css" />
+    <Content Include="home.html" />
+    <Content Include="img\imgSample.jpg" />
+    <Content Include="img\WDF_2229193.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-1.11.2.min.js" />
+    <Content Include="js\main.js" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\spacepants.pubxml" />
     <None Include="Web.Debug.config">
@@ -86,6 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="fonts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
