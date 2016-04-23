@@ -66,7 +66,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="aurora.html" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\common.css" />
     <Content Include="css\main.css" />
     <Content Include="home.html" />
     <Content Include="homeVR.html" />
@@ -81,14 +83,21 @@
     <Content Include="img\btn2hover.png" />
     <Content Include="img\imgSample.jpg" />
     <Content Include="img\milkyway.jpg" />
+    <Content Include="img\pin.png" />
+    <Content Include="img\test.jpg" />
     <Content Include="img\sample.png" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\common.js" />
     <Content Include="js\jquery-1.11.2.min.js" />
     <Content Include="js\main.js" />
+    <Content Include="js\vr.dev.js" />
+    <Content Include="js\vr.js" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\spacepants %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\spacepants %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\spacepants.pubxml" />
     <Content Include="quiz.json" />
+    <Content Include="mars_quiz.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -103,6 +112,7 @@
     <Content Include="index.html" />
     <Content Include="panorama.html" />
     <Content Include="quiz.html" />
+    <Content Include="video_default.html" />
     <Content Include="video.html" />
     <Content Include="Web.config" />
   </ItemGroup>
