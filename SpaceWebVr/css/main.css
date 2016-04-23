@@ -1,11 +1,15 @@
-﻿body {
-    position: relative;
+﻿
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
 .container {
-    height: 911px;
+    /*height: 911px;
     display: block;
-    max-width: 100%;
+    max-width: 100%;*/
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .wrap {
@@ -13,14 +17,16 @@
     display: block;
     position: relative;
     overflow: hidden;
+    background-image: url('../img/imgSample.jpg');
     background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
+    display: table;
+    width: 100%;
+    height: 100%;
 }
+
+
 
 .holder {
     display: table;
@@ -106,5 +112,5 @@
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
     color: #fff;
     background: black;
-    border:none;
+    border: none;
 }
