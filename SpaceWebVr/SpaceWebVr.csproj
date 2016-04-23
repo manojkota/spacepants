@@ -75,7 +75,9 @@
     <Content Include="js\jquery-1.11.2.min.js" />
     <Content Include="js\main.js" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\spacepants %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\spacepants.pubxml" />
+    <Content Include="quiz.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -89,6 +91,7 @@
     <Content Include="cursor.html" />
     <Content Include="index.html" />
     <Content Include="panorama.html" />
+    <Content Include="quiz.html" />
     <Content Include="video.html" />
     <Content Include="Web.config" />
   </ItemGroup>
