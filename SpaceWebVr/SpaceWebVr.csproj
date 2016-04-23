@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\common.css" />
     <Content Include="css\main.css" />
     <Content Include="home.html" />
     <Content Include="homeVR.html" />
@@ -77,6 +78,7 @@
     <Content Include="img\test.jpg" />
     <Content Include="img\sample.png" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\common.js" />
     <Content Include="js\jquery-1.11.2.min.js" />
     <Content Include="js\main.js" />
     <Content Include="js\vr.dev.js" />

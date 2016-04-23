@@ -9,27 +9,49 @@
     <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
 
     <script src="https://rawgit.com/mayognaise/aframe-video-shader/master/dist/aframe-vid-shader.min.js"></script>
-    
+
+    <script src="js/common.js"></script>
+    <link href="css/common.css" rel="stylesheet" />
 </head>
 <body>
-    
-    
     <a-scene>
-        <a-entity geometry="primitive: plane;width:5" material="shader:video;src:url(assets/spacewalk.mp4);"></a-entity>
-        <!--<a-videosphere id="myVideo" src="Assets/spacewalk.mp4" material="shader:video;"></a-videosphere>-->
-        <!--<a-entity geometry="primitive:plane;" material="shader:video;">
-            <a-videosphere id="myVideo" src="Assets/spacewalk.mp4"></a-videosphere>
-        </a-entity>-->
+
+        <!-- assets -->
+        <a-assets>
+            <video id="bbb" src="Assets/Spacewalk.mp4"></video>
+        </a-assets>
+
+        <!--description-->
+        <!--<a-entity id="panel1" geometry="primitive: sphere; radius: 5" position="0 2.5 -5" rotation="0 -90 0" material="shader: flat; side:double;color: #222;" visible="false"></a-entity>
+        <a-entity id="data" position="0 2.5 -3" rotation="0 -90 0" material="shader: flat; side: double;  transparent: true;src: url(img/test.jpg);" visible="false"></a-entity>-->
+
+        <!-- videosphere -->
+        <a-entity class="video" rotation="0 -90 0" geometry="primitive:sphere;radius:5000;" position="0 2.5 20" material="shader:video;src:#bbb;" scale="-1 1 1"></a-entity>
+        <!--<a-entity id="pin1" geometry="primitive: plane; height: 0.18; width: 0.2" position="-2 2.4 18" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;src: url(img/pin.png);"></a-entity>
+        <a-entity id="data" geometry="primitive: plane; height: 1; width: 2" position="-2 2.4 18" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;src: url(img/sample.png);" visible="false"></a-entity>-->
+
+        <!-- Camera -->
+        <a-entity id="camera" camera gamepad-controls look-controls position="0 2.2 20" cursor-visible="enabled: false" wasd-controls="enabled: false">
+            <a-animation attribute="position" begin="level0" to="0 2.2 -1" dur="0.5"></a-animation>
+
+            <a-entity id="cursor" cursor="fuse: true; maxDistance: 30;" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="shader: flat; color: #ff0000" opacity="1" position="0 0 -2">
+                <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+                <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+            </a-entity>
+
+        </a-entity>
     </a-scene>
 
-    <script>
+    <div class="spacer"></div>
+    <div class="spacer2"></div>
 
-        //document.querySelector('#pin1').addEventListener('click', function () {
-        //    document.querySelector('#myVideo').setAttribute('pause', 'true');
-        //    //document.querySelector('#camera').emit('level0')
-        //});
-        
-    
-    </script>
+    <!--<script>
+        document.querySelector('#pin1').addEventListener('click', function () {
+            //document.querySelector('.video').pause();
+            //document.querySelector('#camera').emit('level0');
+            //document.querySelector('#data').setAttribute('visible', 'true');
+            document.querySelector('#panel1').setAttribute('visible', 'true');
+        });
+    </script>-->
 </body>
 </html>
