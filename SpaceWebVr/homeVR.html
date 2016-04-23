@@ -173,6 +173,16 @@ learn about our universe through immersive interaction and games.;"></a-entity>
             alert('hovered');
         });
 
+        document.querySelector('#page2-2').addEventListener('click', function () {
+          //  window.location.replace("/videos.html?q=name");
+            window.location.replace("/video.html");
+        });
+
+        document.querySelector('#page2-3').addEventListener('click', function () {
+            //  window.location.replace("/quiz.html?q=name");
+            window.location.replace("/quiz.html?q=mars");
+        });
+
         document.querySelector('#page1-4').addEventListener('click', function () {
 
             document.querySelector('#page1-1').setAttribute('visible', 'false');
