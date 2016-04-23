@@ -24,12 +24,10 @@
         <!--description-->
         <!--<a-entity id="panel1" geometry="primitive: sphere; radius: 5" position="0 2.5 -5" rotation="0 -90 0" material="shader: flat; side:double;color: #222;" visible="false"></a-entity>
         <a-entity id="data" position="0 2.5 -3" rotation="0 -90 0" material="shader: flat; side: double;  transparent: true;src: url(img/test.jpg);" visible="false"></a-entity>-->
-
         <!-- videosphere -->
         <a-entity class="video" rotation="0 -90 0" geometry="primitive:sphere;radius:5000;" position="0 2.5 20" material="shader:video;src:#bbb;" scale="-1 1 1"></a-entity>
-        <!--<a-entity id="pin1" geometry="primitive: plane; height: 0.18; width: 0.2" position="-2 2.4 18" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;src: url(img/pin.png);"></a-entity>
-        <a-entity id="data" geometry="primitive: plane; height: 1; width: 2" position="-2 2.4 18" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;src: url(img/sample.png);" visible="false"></a-entity>-->
-
+        <a-entity id="pin1" geometry="primitive: plane; height: 0.18; width: 0.2" position="0 2.5 18" rotation="0 0 0" onclick="window.open('homevr.html',target='_self');" material="shader: flat; side: double;  transparent: true;src: url(img/pin.png);"></a-entity>
+        <!--<a-entity id="data" geometry="primitive: plane; height: 1; width: 2" position="-2 2.4 18" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;src: url(img/sample.png);" visible="false"></a-entity>-->
         <!-- Camera -->
         <a-entity id="camera" camera gamepad-controls look-controls position="0 2.2 20" cursor-visible="enabled: false" wasd-controls="enabled: false">
             <a-animation attribute="position" begin="level0" to="0 2.2 -1" dur="0.5"></a-animation>
@@ -44,6 +42,24 @@
 
     <div class="spacer"></div>
     <div class="spacer2"></div>
+
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+
+        var name = getParameterByName('q') + '.mp4';
+        document.querySelector('#bbb').setAttribute('src', 'assets/' + name);
+
+    </script>
 
     <!--<script>
         document.querySelector('#pin1').addEventListener('click', function () {

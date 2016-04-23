@@ -66,6 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\ISS spacewalk_maxresdefault.jpg" />
+    <Content Include="Assets\ISS_maxresdefault.jpg" />
     <Content Include="aurora.html" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\common.css" />
@@ -81,7 +83,7 @@
     <Content Include="img\btn1hover.png" />
     <Content Include="img\btn2.png" />
     <Content Include="img\btn2hover.png" />
-    <Content Include="img\imgSample.jpg" />
+    <Content Include="Assets\marspath_presidential_med.jpg" />
     <Content Include="img\milkyway.jpg" />
     <Content Include="img\pin.png" />
     <Content Include="img\test.jpg" />
@@ -96,6 +98,7 @@
     <None Include="Properties\PublishProfiles\spacepants %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\spacepants %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\spacepants.pubxml" />
+    <Content Include="mars_pathfinder.html" />
     <Content Include="quiz.json" />
     <Content Include="mars_quiz.json" />
     <None Include="Web.Debug.config">
