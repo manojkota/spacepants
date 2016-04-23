@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="aurora.html" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\common.css" />
     <Content Include="css\main.css" />

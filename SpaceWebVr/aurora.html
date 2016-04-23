@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Virtual auroras</title>
+    <meta name="description" content="Sky — A-Frame">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+
+    <script src="https://rawgit.com/mayognaise/aframe-video-shader/master/dist/aframe-vid-shader.min.js"></script>
+</head>
+<body>
+
+    <a-scene>
+        <!-- assets -->
+        <a-assets>
+            <video id="bbb" src="Assets/01_EQ_AUR_milkywaystarsbor_iss_20120123HD_web.mp4"></video>
+        </a-assets>
+        <!-- bbb 0 2 -5 -->
+        <!--<a-entity id="video" geometry="primitive:plane;width:10;height:6;depth:2;" rotation="0 0 0" position="0 2 -5" material="shader:video;src:#bbb;"></a-entity>-->
+
+        <a-entity geometry="primitive: plane; depth: 0; height: 8; width: 10" position="0 2 -5" rotation="0 0 0" material="shader: flat; transparent: true;src: url(http://services.swpc.noaa.gov/images/animations/ovation-north/latest.png);"></a-entity>
+
+        <!--<a-entity id="img" geometry="primitive:plane;width:6;height:6;" rotation="0 0 0" position="-10 2 -5" material="shader: flat; side: single;  transparent: true;src: url(http://services.swpc.noaa.gov/images/animations/ovation-north/latest.png);"></a-entity>-->
+        <!-- sky -->
+        <a-sky color="white"></a-sky>
+
+    </a-scene>
+
+    <div class="buttons novr">
+        <a href="javascript:togglePlayback()">toggle playback</a>
+    </div>
+    <div class="spacer"></div>
+    <div class="spacer2"></div>
+    <script src="../common.js"></script>
+    <script type="text/javascript">
+
+    function togglePlayback () {
+      var el = document.getElementById('video')
+      var material = Object.assign({}, el.getAttribute('material'))
+      material.pause = !material.pause
+      el.setAttribute('material', material)
+    }
+    </script>
+</body>
+</html>
