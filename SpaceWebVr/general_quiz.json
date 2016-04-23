@@ -1,0 +1,62 @@
+﻿[
+  {
+    "id" :  1,
+    "question": "Do astronauts ever wear diapers?",
+    "option1": "TRUE",
+    "option2": "FALSE",
+    "option3": " ",
+    "option4": " ",
+    "answer": "1",
+    "info" :  "Both male and female NASA astronauts wear diapers during liftoff and landing. They also wear during extra-vehicular activity (EVA) and can urinate into the Maximum Absorbency Garment (MAG) and usually wait to defecate when they return to the spacecraft."
+  },
+  {
+    "id" :  2,
+    "question": "Which is comparable to the air pressure inside the ISS?",
+    "option1": "sea level",
+    "option2": "5,000 feet (1524 m)",
+    "option3": "7,500 feet (2286 m)",
+    "option4": "None of these",
+    "answer": "1",
+    "info" :  "Inside the ISS is like having a swim on the beach. Several systems are currently used on board the ISS to maintain the spacecraft's atmosphere, which is similar to the Earth's. Normal air pressure on the ISS is 101.3 kPa (14.7 psi); the same as at sea level on Earth."
+  },
+  {
+    "id" :  3,
+    "question": "When did construction of the ISS begin?",
+    "option1": "1969",
+    "option2": "1992",
+    "option3": "1998",
+    "option4": "2002",
+    "answer": "3",
+    "info" :  " "
+  },
+  {
+    "id" :  4,
+    "question": "Which of the following countries has NOT sent astronauts to the station?",
+    "option1": "USA",
+    "option2": "Russia",
+    "option3": "Japan",
+    "option4": "North Korea",
+    "answer": "4",
+    "info" :  " "
+  },
+  {
+    "id" :  5,
+    "question": "Building the space station required more than 40 rocket launches?",
+    "option1": "TRUE",
+    "option2": "FALSE",
+    "option3": " ",
+    "option4": " ",
+    "answer": "1",
+    "info" :  " "
+  },
+  {
+    "id" :  6,
+    "question": "The space station orbits the Earth once every?",
+    "option1": "Trick question as it doesn’t orbit",
+    "option2": "Single day",
+    "option3": "90 minutes",
+    "option4": "3.5 hours",
+    "answer": "3",
+    "info" :  " "
+  }
+]

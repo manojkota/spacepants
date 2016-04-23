@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="Assets\ISS spacewalk_maxresdefault.jpg" />
     <Content Include="Assets\ISS_maxresdefault.jpg" />
+    <Content Include="Assets\marspath_maxresdefault.jpg" />
     <Content Include="aurora.html" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\common.css" />
@@ -95,6 +96,8 @@
     <Content Include="js\vr.dev.js" />
     <Content Include="js\vr.js" />
     <Content Include="packages.config" />
+    <Content Include="iss_quiz.json" />
+    <Content Include="general_quiz.json" />
     <None Include="Properties\PublishProfiles\spacepants %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\spacepants %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\spacepants.pubxml" />
