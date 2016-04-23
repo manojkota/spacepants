@@ -8,7 +8,7 @@
     <link href="css/main.css" rel="stylesheet" />
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!--<script src="js/main.js"></script>-->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
@@ -18,69 +18,214 @@
 
     <a-scene>
         <a-assets>
-            <img id="my-image" src="img/imgSample.jpg">
-            <img id="btn1" src="img/button1.png">
-            <img id="btn2" src="img/button2.png">
+            <img id="milkyway" src="img/bg_milkyway04_2x.png">
+            <img id="my-image" src="img/bg_aurora04_1x.png">
+            <img id="my-space" src="img/bg_space04_1x.png">
+            <img id="btn1" src="img/btn1.png">
+            <img id="btn2" src="img/btn2.png">
+            <img id="btn1hover" src="img/btn1hover.png">
+            <img id="btn2hover" src="img/btn2hover.png">
             <img id="sampleImg" src="img/sample.png">
         </a-assets>
 
         <!-- home page -->
-        <a-entity geometry="primitive: plane; height: 0.58; width: 2" position="-2 3.5 16" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text: SPACE PANTS;"></a-entity>
-        <a-entity geometry="primitive: plane; height: 0.58; width: 2" position="-4 3 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: Journey to infinity and beyond;"></a-entity>
 
-        <a-image src="#btn1" width="5" height="2" position="4 0 0" id="earthq"></a-image>
-        <a-image src="#btn2" width="5" height="2" position="-4 0 0" id="spacet"></a-image>
+        <a-entity visible="true" id="page1-1" geometry="primitive: plane; height: 0.58; width: 2" position="-1.7 3.5 16" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text: SPACETREX;"></a-entity>
+        <a-entity visible="true" id="page1-2" geometry="primitive: plane; height: 0.58; width: 2" position="-4 3 14" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: #50e3c2; roughness: 1; metalness: 0" text="text: journey to infinity and beyond;"></a-entity>
 
-        <a-sky src="#my-image" rotation="0 -100 0"></a-sky>
+        <a-entity visible="false" id="page2bt" geometry="primitive: plane; height: 0.58; width: 2" position="-1.7 8.5 16" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: #6294cf;" text="text: EARTH QUEST;"></a-entity>
+        <a-entity visible="false" id="page2t" geometry="primitive: plane; height: 0.58; width: 2" position="-6 7.5 14" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: #f4faff; roughness: 1; metalness: 0" text="text: experience the adventure in space, mars and beyond. 
+learn about our universe through immersive interaction and games.;"></a-entity>
 
+            <a-image visible="true" id="page1-3" src="#btn1" width="10" height="3" position="8 0 0" material="shader: flat; side: double;  transparent: true;"></a-image>
+            <a-image visible="true" id="page1-4" src="#btn2" width="10" height="3" position="-5 0 0" material="shader: flat; side: double;  transparent: true;"></a-image>
 
-        <!-- earth page -->
-        <!--<a-image src="#sampleImg" width="8" height="5" position="-6 5 0" id=""></a-image>-->
-
-        <!-- space page 
-        <a-image src="#sampleImg" width="5" height="2" position="4 0 0" id=""></a-image>-->
-
-        <!-- Camera -->
-        <a-entity id="camera" camera gamepad-controls look-controls position="0 2.2 20" cursor-visible="enabled: false" wasd-controls="enabled: false">
-            <a-animation attribute="position" begin="level0" to="0 2.2 -1" dur="0"></a-animation>
-            <a-animation attribute="position" begin="level1" to="0 2.2 -21" dur="0"></a-animation>
-            <a-animation attribute="position" begin="level2" to="0 2.2 -41" dur="0"></a-animation>
-            <a-animation attribute="position" begin="level3" to="0 2.2 -61" dur="0"></a-animation>
-            <a-animation attribute="position" begin="level4" to="0 2.2 -81" dur="0"></a-animation>
-            <a-animation attribute="position" begin="level5" to="0 2.2 -101" dur="0"></a-animation>
-            <a-animation attribute="position" begin="levelnone" to="0 2.2 20" dur="0"></a-animation>
+            <!--<a-image visible="false" id="page1-3-hovered" src="#btn1hover" width="10" height="3" position="8 0 0" material="shader: flat; side: double;  transparent: true;"></a-image>
+            <a-image visible="false" id="page1-4-hovered" src="#btn2hover" width="10" height="3" position="-5 0 0" material="shader: flat; side: double;  transparent: true;"></a-image>-->
 
 
-            <a-entity id="cursor" cursor="fuse: true; maxDistance: 30;" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="shader: flat; color: #ff0000" opacity="1" position="0 0 -2">
-                <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
-                <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+            <a-sky visible="true" id="page1-5" src="#milkyway" rotation="0 -95 -25"></a-sky>
+
+            <a-sky visible="false" id="page2-1" src="#my-image" rotation="0 -100 0"></a-sky>
+
+            <a-sky visible="false" id="page3-1" src="#my-space" rotation="0 -100 0"></a-sky>
+
+            <!-- earth page -->
+
+            <a-entity visible="false" id="page0-2" geometry="primitive: plane; height: 0.58; width: 2" position="-4 3 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: Journey to infinity and beyond;"></a-entity>
+
+            <a-image visible="false" id="page3-2" src="#sampleImg" width="8" height="5" position="-16 5 0"></a-image>
+            <a-image visible="false" id="page3-3" src="#sampleImg" width="8" height="5" position="-6 5 0"></a-image>
+            <a-image visible="false" id="page3-4" src="#sampleImg" width="8" height="5" position="4 5 0"></a-image>
+            <a-image visible="false" id="page3-5" src="#sampleImg" width="8" height="5" position="14 5 0"></a-image>
+
+            <a-entity visible="false" id="page3-6" geometry="primitive: plane; height: 0.58; width: 2" position="-7.3 1 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc1;"></a-entity>
+            <a-entity visible="false" id="page3-7" geometry="primitive: plane; height: 0.58; width: 2" position="-3.3 1 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc1;"></a-entity>
+            <a-entity visible="false" id="page3-8" geometry="primitive: plane; height: 0.58; width: 2" position="1 1 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc2;"></a-entity>
+            <a-entity visible="false" id="page3-9" geometry="primitive: plane; height: 0.58; width: 2" position="5 1 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc3;"></a-entity>
+
+            <a-image visible="false" id="page3-10" src="#sampleImg" width="8" height="5" position="-16 15 0"></a-image>
+            <a-image visible="false" id="page3-11" src="#sampleImg" width="8" height="5" position="-6 15 0"></a-image>
+            <a-image visible="false" id="page3-12" src="#sampleImg" width="8" height="5" position="4 15 0"></a-image>
+            <a-image visible="false" id="page3-13" src="#sampleImg" width="8" height="5" position="14 15 0"></a-image>
+
+            <a-entity visible="false" id="page3-14" geometry="primitive: plane; height: 0.58; width: 2" position="-7.3 11 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc1;"></a-entity>
+            <a-entity visible="false" id="page3-15" geometry="primitive: plane; height: 0.58; width: 2" position="-3.3 11 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc1;"></a-entity>
+            <a-entity visible="false" id="page3-16" geometry="primitive: plane; height: 0.58; width: 2" position="1 11 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc2;"></a-entity>
+            <a-entity visible="false" id="page3-17" geometry="primitive: plane; height: 0.58; width: 2" position="5 11 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc3;"></a-entity>
+
+            <!-- Earth page-->
+
+            <a-image visible="false" id="page2-2" src="#sampleImg" width="8" height="5" position="-16 5 0"></a-image>
+            <a-image visible="false" id="page2-3" src="#sampleImg" width="8" height="5" position="-6 5 0"></a-image>
+            <a-image visible="false" id="page2-4" src="#sampleImg" width="8" height="5" position="4 5 0"></a-image>
+            <a-image visible="false" id="page2-5" src="#sampleImg" width="8" height="5" position="14 5 0"></a-image>
+
+            <a-entity visible="false" id="page2-6" geometry="primitive: plane; height: 0.58; width: 2" position="-7.3 1 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc1;"></a-entity>
+            <a-entity visible="false" id="page2-7" geometry="primitive: plane; height: 0.58; width: 2" position="-3.3 1 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc1;"></a-entity>
+            <a-entity visible="false" id="page2-8" geometry="primitive: plane; height: 0.58; width: 2" position="1 1 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc2;"></a-entity>
+            <a-entity visible="false" id="page2-9" geometry="primitive: plane; height: 0.58; width: 2" position="5 1 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc3;"></a-entity>
+
+            <a-image visible="false" id="page2-10" src="#sampleImg" width="8" height="5" position="-16 15 0"></a-image>
+            <a-image visible="false" id="page2-11" src="#sampleImg" width="8" height="5" position="-6 15 0"></a-image>
+            <a-image visible="false" id="page2-12" src="#sampleImg" width="8" height="5" position="4 15 0"></a-image>
+            <a-image visible="false" id="page2-13" src="#sampleImg" width="8" height="5" position="14 15 0"></a-image>
+
+            <a-entity visible="false" id="page2-14" geometry="primitive: plane; height: 0.58; width: 2" position="-7.3 11 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc1;"></a-entity>
+            <a-entity visible="false" id="page2-15" geometry="primitive: plane; height: 0.58; width: 2" position="-3.3 11 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc1;"></a-entity>
+            <a-entity visible="false" id="page2-16" geometry="primitive: plane; height: 0.58; width: 2" position="1 11 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc2;"></a-entity>
+            <a-entity visible="false" id="page2-17" geometry="primitive: plane; height: 0.58; width: 2" position="5 11 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: desc3;"></a-entity>
+
+
+            <!-- Camera -->
+            <a-entity id="camera" camera gamepad-controls look-controls position="0 2.2 20" cursor-visible="enabled: false" wasd-controls="enabled: false">
+                <a-animation attribute="position" begin="level0" to="0 2.2 -1" dur="0"></a-animation>
+                <a-animation attribute="position" begin="level1" to="0 2.2 -21" dur="0"></a-animation>
+                <a-animation attribute="position" begin="level2" to="0 2.2 -41" dur="0"></a-animation>
+                <a-animation attribute="position" begin="level3" to="0 2.2 -61" dur="0"></a-animation>
+                <a-animation attribute="position" begin="level4" to="0 2.2 -81" dur="0"></a-animation>
+                <a-animation attribute="position" begin="level5" to="0 2.2 -101" dur="0"></a-animation>
+                <a-animation attribute="position" begin="levelnone" to="0 2.2 20" dur="0"></a-animation>
+
+
+                <a-entity id="cursor" cursor="fuse: true; maxDistance: 30;" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="shader: flat; color: #ff0000" opacity="1" position="0 0 -2">
+                    <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+                    <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+                </a-entity>
+
             </a-entity>
 
-        </a-entity>
+            <a-entity camera look-controls wasd-controls></a-entity>
     </a-scene>
-    <script>
-        $(function () {
-            $('a-enter-vr-butto').on('click');
-        })
-    </script>
+
     <script>
 
-        document.querySelector('#spacet').addEventListener('click', function () {
-    
-            //document.querySelector('#camera').emit('level0')
-            //document.querySelector('#cursor').setAttribute('position', '0 0 -2')
-           
+        document.querySelector('#page1-3').addEventListener('click', function () { //red
+
+            document.querySelector('#page1-1').setAttribute('visible', 'false');
+            document.querySelector('#page1-2').setAttribute('visible', 'false');
+            document.querySelector('#page1-3').setAttribute('visible', 'false');
+            document.querySelector('#page1-4').setAttribute('visible', 'false');
+            document.querySelector('#page1-5').setAttribute('visible', 'false');
+
+
+            document.querySelector('#page2-1').setAttribute('visible', 'true');
+            document.querySelector('#page2-2').setAttribute('visible', 'true');
+            document.querySelector('#page2-3').setAttribute('visible', 'true');
+            document.querySelector('#page2-4').setAttribute('visible', 'true');
+            document.querySelector('#page2-5').setAttribute('visible', 'true');
+            document.querySelector('#page2-6').setAttribute('visible', 'true');
+            document.querySelector('#page2-7').setAttribute('visible', 'true');
+            document.querySelector('#page2-8').setAttribute('visible', 'true');
+            document.querySelector('#page2-9').setAttribute('visible', 'true');
+            document.querySelector('#page2-10').setAttribute('visible', 'true');
+            document.querySelector('#page2-11').setAttribute('visible', 'true');
+            document.querySelector('#page2-12').setAttribute('visible', 'true');
+            document.querySelector('#page2-13').setAttribute('visible', 'true');
+            document.querySelector('#page2-14').setAttribute('visible', 'true');
+            document.querySelector('#page2-15').setAttribute('visible', 'true');
+            document.querySelector('#page2-16').setAttribute('visible', 'true');
+            document.querySelector('#page2-17').setAttribute('visible', 'true'); 
+            document.querySelector('#page2bt').setAttribute('visible', 'true'); 
+            document.querySelector('#page2t').setAttribute('visible', 'true');
+
+            document.querySelector('#page3-1').setAttribute('visible', 'false');
+            document.querySelector('#page3-2').setAttribute('visible', 'false');
+            document.querySelector('#page3-3').setAttribute('visible', 'false');
+            document.querySelector('#page3-4').setAttribute('visible', 'false');
+            document.querySelector('#page3-5').setAttribute('visible', 'false');
+            document.querySelector('#page3-6').setAttribute('visible', 'false');
+            document.querySelector('#page3-7').setAttribute('visible', 'false');
+            document.querySelector('#page3-8').setAttribute('visible', 'false');
+            document.querySelector('#page3-9').setAttribute('visible', 'false');
+            document.querySelector('#page3-10').setAttribute('visible', 'false');
+            document.querySelector('#page3-11').setAttribute('visible', 'false');
+            document.querySelector('#page3-12').setAttribute('visible', 'false');
+            document.querySelector('#page3-13').setAttribute('visible', 'false');
+            document.querySelector('#page3-14').setAttribute('visible', 'false');
+            document.querySelector('#page3-15').setAttribute('visible', 'false');
+            document.querySelector('#page3-16').setAttribute('visible', 'false');
+            document.querySelector('#page3-17').setAttribute('visible', 'false');
+
         });
 
-        document.querySelector('#earthq').addEventListener('click', function () {
-            //document.querySelector('#question').removeAttribute('data-questions');
-            //loadquestion();
-            //document.querySelector('#camera').emit('level0')
-            //document.querySelector('#cursor').setAttribute('position', '0 0 -2')
-            alert('earthq');
+        document.querySelector('#page1-3').addEventListener('mouseover', function () {
+            alert('hovered');
         });
+
+        document.querySelector('#page1-4').addEventListener('click', function () {
+
+            document.querySelector('#page1-1').setAttribute('visible', 'false');
+            document.querySelector('#page1-2').setAttribute('visible', 'false');
+            document.querySelector('#page1-3').setAttribute('visible', 'false');
+            document.querySelector('#page1-4').setAttribute('visible', 'false');
+            document.querySelector('#page1-5').setAttribute('visible', 'false');
+
+
+            document.querySelector('#page2-1').setAttribute('visible', 'false');
+            document.querySelector('#page2-2').setAttribute('visible', 'false');
+            document.querySelector('#page2-3').setAttribute('visible', 'false');
+            document.querySelector('#page2-4').setAttribute('visible', 'false');
+            document.querySelector('#page2-5').setAttribute('visible', 'false');
+            document.querySelector('#page2-6').setAttribute('visible', 'false');
+            document.querySelector('#page2-7').setAttribute('visible', 'false');
+            document.querySelector('#page2-8').setAttribute('visible', 'false');
+            document.querySelector('#page2-9').setAttribute('visible', 'false');
+            document.querySelector('#page2-10').setAttribute('visible', 'false');
+            document.querySelector('#page2-11').setAttribute('visible', 'false');
+            document.querySelector('#page2-12').setAttribute('visible', 'false');
+            document.querySelector('#page2-13').setAttribute('visible', 'false');
+            document.querySelector('#page2-14').setAttribute('visible', 'false');
+            document.querySelector('#page2-15').setAttribute('visible', 'false');
+            document.querySelector('#page2-16').setAttribute('visible', 'false');
+            document.querySelector('#page2-17').setAttribute('visible', 'false');
+            document.querySelector('#page2bt').setAttribute('visible', 'false');
+            document.querySelector('#page2t').setAttribute('visible', 'false');
+
+
+            document.querySelector('#page3-1').setAttribute('visible', 'true');
+            document.querySelector('#page3-2').setAttribute('visible', 'true');
+            document.querySelector('#page3-3').setAttribute('visible', 'true');
+            document.querySelector('#page3-4').setAttribute('visible', 'true');
+            document.querySelector('#page3-5').setAttribute('visible', 'true');
+            document.querySelector('#page3-6').setAttribute('visible', 'true');
+            document.querySelector('#page3-7').setAttribute('visible', 'true');
+            document.querySelector('#page3-8').setAttribute('visible', 'true');
+            document.querySelector('#page3-9').setAttribute('visible', 'true');
+            document.querySelector('#page3-10').setAttribute('visible', 'true');
+            document.querySelector('#page3-11').setAttribute('visible', 'true');
+            document.querySelector('#page3-12').setAttribute('visible', 'true');
+            document.querySelector('#page3-13').setAttribute('visible', 'true');
+            document.querySelector('#page3-14').setAttribute('visible', 'true');
+            document.querySelector('#page3-15').setAttribute('visible', 'true');
+            document.querySelector('#page3-16').setAttribute('visible', 'true');
+            document.querySelector('#page3-17').setAttribute('visible', 'true');
+
+        });
+
+
 
     </script>
-
+    <script src="js/main.js"></script>
 </body>
 </html>

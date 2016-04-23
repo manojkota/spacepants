@@ -1,6 +1,26 @@
 ﻿$(function () {
+    
+    $('a-enter-vr-button').on('click');
+    var gHMD, gPositionSensor;
 
-    $('.spacet').on('click', function () {
+    navigator.getVRDevices().then(function (devices) {
+        for (var i = 0; i < devices.length; ++i) {
+            if (devices[i] instanceof HMDVRDevice) {
+                gHMD = devices[i];
+                break;
+            }
+        }
+
+        if (gHMD) {
+            for (var i = 0; i < devices.length; ++i) {
+                if (devices[i] instanceof PositionSensorVRDevice && devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
+                    gPositionSensor = devices[i];
+                    break;
+                }
+            }
+        }
+    });
+    /*$('.spacet').on('click', function () {
         $('.page2').removeClass('hidden');
         $('.page1').addClass('hidden');
         $('.switch').removeClass('hidden');
@@ -39,5 +59,5 @@
         $('.switch').addClass('hidden');
         window.location.replace("/index.html");
       //  $(this). sending query string
-    });
+    });*/
 })
