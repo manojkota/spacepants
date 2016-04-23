@@ -11,15 +11,15 @@
 <body>
 
     <a-scene>
-
-
-
         <!-- Level 6 -->
         <a-entity geometry="primitive: sphere; radius: 5" position="0 2.5 -101" rotation="0 90 0" material="shader: flat; side:double;
 color: #222"></a-entity>
-        <a-entity id="congrats" geometry="primitive: plane; height: 0.58; width: 2" position="0 2 -103" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text:Congrats!!!"></a-entity>
-        <a-entity id="nextquestion" geometry="primitive: plane; height: 0.58; width: 2" position="0 1 -103" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text:Next question"></a-entity>
-        <a-entity id="retry" geometry="primitive: plane; height: 0.58; width: 2" position="0 0.5 -103" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text:Retry"></a-entity>
+        <a-entity id="congrats" geometry="primitive: plane; height: 0.58; width: 2" position="0 3 -103" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text:Congrats!!!"></a-entity>
+        <a-entity id="nextquestion" geometry="primitive: plane; height: 0.58; width: 2" position="0 2.5 -103" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text:Next question"></a-entity>
+        <a-entity id="retry" geometry="primitive: plane; height: 0.58; width: 2" position="0 2 -103" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text:Retry"></a-entity>
+        <a-entity id="info" geometry="primitive: plane; height: 0.38; width: 5" position="-2 1.5 -103" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text:Info"></a-entity>
+
+        <a-entity id="home" geometry="primitive: plane; height: 0.38; width: 5" position="0 1 -103" rotation="0 0 0" onclick="window.open('homevr.html',target='_self');" material="shader: flat; side: double;  transparent: true;" text="text:Home"></a-entity>
         
         <!-- Level 1 -->
         <a-entity geometry="primitive: sphere; radius: 5" position="0 2.5 -5" rotation="0 90 0" material="shader: flat; side:double;
@@ -84,7 +84,7 @@ color: #222"></a-entity>
 
     <script>
         var loadquestion = function () {
-            var ajaxcall = jQuery.getJSON("quiz.json", function () {
+            var ajaxcall = jQuery.getJSON(getParameterByName('q')+'_quiz.json', function () {
                 console.log("success");
             })
             .done(function (data) {
@@ -105,6 +105,7 @@ color: #222"></a-entity>
                     document.querySelector('#option2').setAttribute('text', 'text:' + data[i].option2);
                     document.querySelector('#option3').setAttribute('text', 'text:' + data[i].option3);
                     document.querySelector('#option4').setAttribute('text', 'text:' + data[i].option4);
+                    document.querySelector('#info').setAttribute('text', 'text:' + data[i].info);
 
                     if (data[i].answer === "1") {
                         document.querySelector('#option1').addEventListener('click', function () {
@@ -227,6 +228,16 @@ color: #222"></a-entity>
                 }
             } while(false);
         };
+
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
         
     </script>
 

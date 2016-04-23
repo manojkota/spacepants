@@ -11,7 +11,7 @@
         $('.page3').removeClass('hidden');
         $('.switch').removeClass('hidden');
     });
-    $('.probeProbe').bootstrapSwitch('state', true):
+    $('.probeProbe').bootstrapSwitch('state', true);
 
 
     $('.probeProbe').on('switchChange.bootstrapSwitch', function (event, state) {

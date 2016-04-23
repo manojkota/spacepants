@@ -69,10 +69,13 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\main.css" />
     <Content Include="home.html" />
+    <Content Include="homeVR.html" />
+    <Content Include="img\button1.png" />
+    <Content Include="img\button2.png" />
     <Content Include="img\imgSample.jpg" />
     <Content Include="img\pin.png" />
     <Content Include="img\test.jpg" />
-    <Content Include="img\WDF_2229193.png" />
+    <Content Include="img\sample.png" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-1.11.2.min.js" />
     <Content Include="js\main.js" />
@@ -83,6 +86,7 @@
     <None Include="Properties\PublishProfiles\spacepants %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\spacepants.pubxml" />
     <Content Include="quiz.json" />
+    <Content Include="mars_quiz.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -118,7 +122,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>62366</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

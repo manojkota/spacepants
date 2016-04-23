@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="description" content="VR QUIZ">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/main.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+
+</head>
+<body>
+
+    <a-scene>
+        <a-assets>
+            <img id="my-image" src="img/imgSample.jpg">
+            <img id="btn1" src="img/button1.png">
+            <img id="btn2" src="img/button2.png">
+            <img id="sampleImg" src="img/sample.png">
+        </a-assets>
+
+        <!-- home page -->
+        <a-entity geometry="primitive: plane; height: 0.58; width: 2" position="-2 3.5 16" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text: SPACE PANTS;"></a-entity>
+        <a-entity geometry="primitive: plane; height: 0.58; width: 2" position="-4 3 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color:#252525; roughness: 1; metalness: 0" text="text: Journey to infinity and beyond;"></a-entity>
+
+        <a-image src="#btn1" width="5" height="2" position="4 0 0" id="earthq"></a-image>
+        <a-image src="#btn2" width="5" height="2" position="-4 0 0" id="spacet"></a-image>
+
+        <a-sky src="#my-image" rotation="0 -100 0"></a-sky>
+
+
+        <!-- earth page -->
+        <!--<a-image src="#sampleImg" width="8" height="5" position="-6 5 0" id=""></a-image>-->
+
+        <!-- space page 
+        <a-image src="#sampleImg" width="5" height="2" position="4 0 0" id=""></a-image>-->
+
+        <!-- Camera -->
+        <a-entity id="camera" camera gamepad-controls look-controls position="0 2.2 20" cursor-visible="enabled: false" wasd-controls="enabled: false">
+            <a-animation attribute="position" begin="level0" to="0 2.2 -1" dur="0"></a-animation>
+            <a-animation attribute="position" begin="level1" to="0 2.2 -21" dur="0"></a-animation>
+            <a-animation attribute="position" begin="level2" to="0 2.2 -41" dur="0"></a-animation>
+            <a-animation attribute="position" begin="level3" to="0 2.2 -61" dur="0"></a-animation>
+            <a-animation attribute="position" begin="level4" to="0 2.2 -81" dur="0"></a-animation>
+            <a-animation attribute="position" begin="level5" to="0 2.2 -101" dur="0"></a-animation>
+            <a-animation attribute="position" begin="levelnone" to="0 2.2 20" dur="0"></a-animation>
+
+
+            <a-entity id="cursor" cursor="fuse: true; maxDistance: 30;" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="shader: flat; color: #ff0000" opacity="1" position="0 0 -2">
+                <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+                <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+            </a-entity>
+
+        </a-entity>
+    </a-scene>
+    <script>
+        $(function () {
+            $('a-enter-vr-butto').on('click');
+        })
+    </script>
+    <script>
+
+        document.querySelector('#spacet').addEventListener('click', function () {
+    
+            //document.querySelector('#camera').emit('level0')
+            //document.querySelector('#cursor').setAttribute('position', '0 0 -2')
+           
+        });
+
+        document.querySelector('#earthq').addEventListener('click', function () {
+            //document.querySelector('#question').removeAttribute('data-questions');
+            //loadquestion();
+            //document.querySelector('#camera').emit('level0')
+            //document.querySelector('#cursor').setAttribute('position', '0 0 -2')
+            alert('earthq');
+        });
+
+    </script>
+
+</body>
+</html>

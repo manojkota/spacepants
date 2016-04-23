@@ -1,0 +1,53 @@
+﻿[
+  {
+    "id" :  1,
+    "question": "What year did the first rover land on Mars?",
+    "option1": "1971",
+    "option2": "1979",
+    "option3": "1983",
+    "option4": "1996",
+    "answer": "1",
+    "info" :  "The Mars 3 landed on 2nd December 1971 and was the second rover launched by USSR. Unfortunately its lifespan was short as it communicated for only 15 seconds after landing."
+
+  },
+  {
+    "id" :  2,
+    "question": "What was the first first rover to operate outside the Earth-Moon system.",
+    "option1": "Beagle",
+    "option2": "Spirit",
+    "option3": "Viking 1",
+    "option4": "Sojourner",
+    "answer": "3",
+    "info" :  "The Viking 1 (US) was successfully landed on 2nd December 1976 and transmitted photos of Martian surface and analysis of soil samples."
+  },
+  {
+    "id" :  3,
+    "question": "Yogi is an:",
+    "option1": "animated cartoon character",
+    "option2": "martian rock",
+    "option3": "practitioner of yoga",
+    "option4": "All the above",
+    "answer": "4",
+    "info" :  "All are true but Yogi (the martian rock) is one of many rocks that was analysed by Sojourners’ Alpha Particle X-ray Spectrometer and primarily made up of fine-grained homogenous basalt similar to rocks found in the desert of Australia."
+  },
+  {
+    "id" :  4,
+    "question": "Which is comparable in size to the Sojourner rover?",
+    "option1": "standard shoe box",
+    "option2": "microwave oven",
+    "option3": "refrigerator",
+    "option4": "compact car",
+    "answer": "2",
+    "info" :  "It’s the size of a microwave oven and travels at a whopping 0.4 meter/second which provides the necessary torque for driving over obstacles and sandy terrain."
+  },
+  {
+    "id" :  5,
+    "question": "What is the maximum range the Sojourner rover can communicate to the lander?",
+    "option1": "10 m",
+    "option2": "175 m",
+    "option3": "365 m",
+    "option4": "500 m",
+    "answer": "4",
+    "info" :  "Whenever the rover is driving, it periodically stops and sends a ‘heartbeat’ message to the lander. If the lander responds, communications is normal, and the rover continues its traverse. If the rover doesn't get a response, it backs up to the last location at which it successfully communicated, and tries again."
+  }
+]
