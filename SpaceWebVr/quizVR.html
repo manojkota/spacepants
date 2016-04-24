@@ -1,4 +1,4 @@
-﻿<<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -20,40 +20,43 @@
 
             <img id="milkyway" src="img/bg_home_main.png">
             <img id="earthBack" src="img/earthBack.png">
-
             <img id="home" src="img/home.png">
+            <img id="bg" src="img/bg_question.png">
 
         </a-assets>
 
-        <a-sky visible="true" id="page1-5" src="#milkyway" rotation="0 -95 -25" position="0 0 0"></a-sky>
-        <a-image visible="true" id="earthBckBtn" src="#earthBack" width="12" height="3" position="-29.5 27 -15" material="shader: flat; side: double;  transparent: true;"></a-image>
-        <a-image visible="true" id="homeBtn" src="#home" width="8" height="3" position="16 25.5 -15" material="shader: flat; side: double; transparent: true;"></a-image>
+       <a-sky src="#milkyway" rotation="0 -95 -25" ></a-sky>
+
+        <a-image id="earthBckBtn" src="#earthBack" width="12" height="3" position="-29.5 27 -15" material="shader: flat; side: double;  transparent: true;"></a-image>
+        <a-image id="homeBtn" src="#home" width="8" height="3" position="16 25.5 -15" material="shader: flat; side: double; transparent: true;"></a-image>
 
         <!-- Level 6 -->
-        <a-entity geometry="primitive: sphere; radius: 5" position="0 2.5 -101" rotation="0 90 0" material="shader: flat; side:double;
-"></a-entity>
-        <a-entity id="congrats" geometry="primitive: plane; height: 0.58; width: 2" position="0 3 -103" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text:Congrats!!!"></a-entity>
-        <a-entity id="nextquestion" geometry="primitive: plane; height: 0.58; width: 2" position="0 2.5 -103" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text:Next question"></a-entity>
-        <a-entity id="retry" geometry="primitive: plane; height: 0.58; width: 2" position="0 2 -103" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text:Retry"></a-entity>
-        <a-entity id="info" geometry="primitive: plane; height: 0.38; width: 5" position="-2 1.5 -103" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text:Info"></a-entity>
+        <!--<a-entity geometry="primitive: sphere; radius: 5" position="0 2.5 -101" rotation="0 90 0" material="shader: flat; side:double;transparent:true;"
+></a-entity>-->
+        <a-entity id="congrats"  position="-5 3.5 -5" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: white;" text="text:Congrats!!!"></a-entity>
+        <a-entity id="nextquestion"  position="-5 3.5 -5" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: white;" text="text:Next question"></a-entity>
+        <a-entity id="retry"  position="-5 3.5 -5" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: white;" text="text:Retry"></a-entity>
+        <a-entity id="info"  position="-5 3.5 -5" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: white;" text="text:Info"></a-entity>
 
-        <a-entity id="home" geometry="primitive: plane; height: 0.38; width: 5" position="0 1 -103" rotation="0 0 0" onclick="window.open('homevr.html',target='_self');" material="shader: flat; side: double;  transparent: true;" text="text:Home"></a-entity>
+        <a-entity id="home"  position="-5 3.5 -5" rotation="0 0 0" onclick="window.open('homevr.html',target='_self');" material="shader: flat; side: double;  transparent: true;" text="text:Home"></a-entity>
 
         <!-- Level 1 -->
-        <a-entity geometry="primitive: sphere; radius: 5" position="0 2.5 -5" rotation="0 90 0" material="shader: flat; side:double;
-"></a-entity>
-        <a-entity id="question" position="-3 4.5 -5" rotation="0 0 0"></a-entity>
-        <a-entity id="option1" position="-2 3.5 -5" rotation="0 0 0"></a-entity>
-        <a-entity id="option2" position="-2 2.5 -5" rotation="0 0 0"></a-entity>
-        <a-entity id="option3" position="-2 1.5 -5" rotation="0 0 0"></a-entity>
-        <a-entity id="option4" position="-2 0.5 -5" rotation="0 0 0"></a-entity>
+        <!--<a-entity geometry="primitive: sphere; radius: 5" position="0 2.5 -5" rotation="0 90 0" material="shader: flat; side:double;transparent:true;"
+></a-entity>-->
+        <a-entity id="question" position="-7.5 5.5 -7" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: white;"></a-entity>
+        <a-entity id="option1" position="-5 3.5 -5" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: white;"></a-entity>
+        <a-entity id="option2" position="-5 2.5 -5" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: white;"></a-entity>
+        <a-entity id="option3" position="-5 1.5 -5" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: white;"></a-entity>
+        <a-entity id="option4" position="-5 0.5 -5" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: white;"></a-entity>
 
         <!-- Level 0 -->
-        <a-entity geometry="primitive: sphere; radius: 5" position="0 2.5 20" rotation="0 90 0" material="shader: flat; side:double;
- transparent: true"></a-entity>
-        <a-entity geometry="primitive: plane; height: 0.58; width: 2" position="-2 2.4 18" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text: QUIZ TIME;"></a-entity>
+        <!--<a-entity geometry="primitive: sphere; radius: 5" position="0 2.5 20" rotation="0 90 0" material="shader: flat; side:double;transparent:true;src=#milkyway"></a-entity>-->
 
-        <a-entity id="enter" geometry="primitive: plane; height: 0.42; width: 1" position="-1 1.4 18" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text: START;"></a-entity>
+        <a-entity geometry="primitive: plane; height: 0.6; width: 2" position="-4 5 14" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;color:white;" text="text: SPACETREX QUIZ;"></a-entity>
+
+        <a-entity  geometry="primitive: plane; height: 0.58; width: 2" position="-12 5 10" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: white;" text="text: Play a short quiz game and see how well do you know the universe. ;"></a-entity>
+
+        <a-entity id="enter" geometry="primitive: plane; height: 0.42; width: 1" position="-3.5 2.5 14" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;color:white" text="text: START GAME;"></a-entity>
 
         <!-- Camera -->
         <a-entity id="camera" camera gamepad-controls look-controls position="0 2.2 20" cursor-visible="enabled: false" wasd-controls="enabled: false">
