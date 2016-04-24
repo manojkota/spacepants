@@ -129,6 +129,7 @@
     <Content Include="img\pin.png" />
     <Content Include="img\test.jpg" />
     <Content Include="img\sample.png" />
+    <Content Include="iss.html" />
     <Content Include="space.html" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\common.js" />
@@ -136,7 +137,6 @@
     <Content Include="js\main.js" />
     <Content Include="js\vr.dev.js" />
     <Content Include="js\vr.js" />
-    <Content Include="iss.html" />
     <Content Include="packages.config" />
     <Content Include="iss_quiz.json" />
     <Content Include="general_quiz.json" />
