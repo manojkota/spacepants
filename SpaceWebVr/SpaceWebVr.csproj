@@ -80,6 +80,7 @@
     <Content Include="img\aurora_info3.png" />
     <Content Include="img\bg_aurora04_1x.png" />
     <Content Include="img\bg_aurora04_2x.png" />
+    <Content Include="img\bg_home_main.png" />
     <Content Include="img\bg_milkyway04_2x.png" />
     <Content Include="img\bg_space04_1x.png" />
     <Content Include="img\bg_space04_2x.png" />
