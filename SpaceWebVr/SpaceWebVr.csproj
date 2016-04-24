@@ -75,6 +75,7 @@
     <Content Include="css\main.css" />
     <Content Include="home.html" />
     <Content Include="homeVR.html" />
+    <Content Include="img\AppLogo3x_thumb.png" />
     <Content Include="img\aurora_info1.png" />
     <Content Include="img\aurora_info1btn.png" />
     <Content Include="img\aurora_info2.png" />
@@ -90,6 +91,7 @@
     <Content Include="img\btn1hover.png" />
     <Content Include="img\btn2.png" />
     <Content Include="img\btn2hover.png" />
+    <Content Include="img\btn3.png" />
     <Content Include="img\btn_Switch_earth.png" />
     <Content Include="img\btn_Switch_space.png" />
     <Content Include="img\earthBack.png" />
@@ -98,6 +100,7 @@
     <Content Include="img\btn_Home.png" />
     <Content Include="img\btn_quiz.png" />
     <Content Include="img\btn_readMe.png" />
+    <Content Include="img\info_Howitworks_thumb.png" />
     <Content Include="img\iss_info1.png" />
     <Content Include="img\iss_info2.png" />
     <Content Include="img\iss_info3.png" />
@@ -130,6 +133,7 @@
     <Content Include="img\Quiz_questions.png" />
     <Content Include="img\test.jpg" />
     <Content Include="img\sample.png" />
+    <Content Include="iss.html" />
     <Content Include="space.html" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\common.js" />
@@ -137,7 +141,6 @@
     <Content Include="js\main.js" />
     <Content Include="js\vr.dev.js" />
     <Content Include="js\vr.js" />
-    <Content Include="iss.html" />
     <Content Include="packages.config" />
     <Content Include="iss_quiz.json" />
     <Content Include="general_quiz.json" />
