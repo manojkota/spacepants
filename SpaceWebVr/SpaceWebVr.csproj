@@ -88,6 +88,7 @@
     <Content Include="img\btn1hover.png" />
     <Content Include="img\btn2.png" />
     <Content Include="img\btn2hover.png" />
+    <Content Include="img\btn3.png" />
     <Content Include="img\btn_Switch_earth.png" />
     <Content Include="img\btn_Switch_space.png" />
     <Content Include="img\earthBack.png" />
