@@ -1,0 +1,33 @@
+﻿<<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="description" content="VR QUIZ">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+
+            <img id="milkyway" src="img/bg_home_main.png">
+            <img id="earthBack" src="img/earthBack.png">
+
+            <img id="home" src="img/home.png">
+
+        </a-assets>
+
+        <a-sky visible="true" id="page1-5" src="#milkyway" rotation="0 -95 -25" position="0 0 0"></a-sky>
+        <a-image visible="true" id="earthBckBtn" src="#earthBack" width="12" height="3" position="-29.5 27 -15" material="shader: flat; side: double;  transparent: true;"></a-image>
+        <a-image visible="true" id="homeBtn" src="#home" width="8" height="3" position="16 25.5 -15" material="shader: flat; side: double; transparent: true;"></a-image>
+    </a-scene>
+</body>
+</html>
