@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Space walk</title>
+    <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+
+</head>
+
+<body>
+
+    <a-assets>
+        <a-mixin id="cube" geometry="primitive: box"></a-mixin>
+        <a-mixin id="cube-hovered" material="color: white"></a-mixin>
+        <a-mixin id="cube-selected" material="color: cyan"></a-mixin>
+        <a-mixin id="red" material="color: red"></a-mixin>
+        <a-mixin id="green" material="color: green"></a-mixin>
+        <a-mixin id="blue" material="color: blue"></a-mixin>
+        <a-mixin id="yellow" material="color: yellow"></a-mixin>
+        <a-mixin id="sphere" geometry="primitive: sphere"></a-mixin>
+    </a-assets>
+
+    <a-scene>
+        <a-entity position="0 2.2 4">
+            <a-entity camera look-controls wasd-controls>
+                <a-entity position="0 0 -3"
+                          geometry="primitive: ring; radiusOuter: 0.30;
+                          radiusInner: 0.20;"
+                          material="color: cyan; shader: flat"
+                          cursor="maxDistance: 50; fuse: true">
+                    <a-animation begin="click" easing="ease-in" attribute="scale"
+                                 fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+                    <a-animation begin="fusing" easing="ease-in" attribute="scale"
+                                 fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+                </a-entity>
+            </a-entity>
+        </a-entity>
+
+        <!--<a-entity position="-3.5 1 0">
+            <a-entity mixin="cube red">
+                <a-animation begin="click" attribute="position" from="0 0 0"
+                             to="0 0 -10" dur="2000" fill="both"></a-animation>
+            </a-entity>
+        </a-entity>
+
+        <a-entity position="0 1 0">
+            <a-entity mixin="cube green">
+                <a-animation begin="click" attribute="rotation" to="0 360 0"
+                             easing="linear" dur="2000" fill="backwards"></a-animation>
+            </a-entity>
+        </a-entity>
+
+        <a-entity position="3.5 1 0" rotation="0 45 0">
+            <a-entity mixin="cube blue">
+                <a-animation begin="click" fill="forwards" repeat="1"
+                             direction="alternate" attribute="position" from="0 0 0"
+                             to="15 0 0" dur="2000"></a-animation>
+            </a-entity>
+        </a-entity>-->
+
+        <a-entity id="point1" geometry="primitive: plane; depth: 0; height: 0.7; width: 2" position="0 1 0" class="clickable" mixin="cube" rotation="0 0 0" scale=".5 .5 .5" material="shader: flat; side: double;  transparent: true;src: url(img/btn_readMe.png);"></a-entity>
+        <a-entity id="point1desc" geometry="primitive: plane; depth: 0; height: 3;width: 7" position="0 1 0" class="clickable" mixin="cube" rotation="-10 0 0" scale="1 1 1" material="shader: flat; side: double;  transparent: true;src: url(img/aurora_info1.png);" visible="false"></a-entity>
+
+        <a-entity id="point2" geometry="primitive: plane; depth: 0; height: 0.7; width: 2" position="10 2 0" class="clickable" mixin="cube" rotation="0 -65 0" scale=".5 .5 .5" material="shader: flat; side: double;  transparent: true;src: url(img/btn_readMe.png);"></a-entity>
+        <a-entity id="point2desc" geometry="primitive: plane; depth: 0; height: 5;width: 10" position="10 2 0" class="clickable" mixin="cube" rotation="0 -65 0" scale="1 1 1" material="shader: flat; side: double;  transparent: true;src: url(img/aurora_info2.png);" visible="false"></a-entity>
+
+        <a-entity id="point3" geometry="primitive: plane; depth: 0; height: 0.7; width: 2" position="-12 0 0" class="clickable" mixin="cube" rotation="0 65 0" scale="1 1 1" material="shader: flat; side: double;  transparent: true;src: url(img/btn_readMe.png);"></a-entity>
+        <a-entity id="point3desc" geometry="primitive: plane; depth: 0; height: 5;width: 10" position="-12 0 0" class="clickable" mixin="cube" rotation="-15 65 0" scale="1 1 1" material="shader: flat; side: double;  transparent: true;src: url(img/aurora_info3.png);" visible="false"></a-entity>
+
+        <a-entity id="quiz" geometry="primitive: plane; depth: 0; height: 0.7; width: 2" position="0 5 0" onclick="window.open('quiz.html?q=general',target='_self');" class="clickable" mixin="cube" rotation="0 0 0" scale="1 1 1" material="shader: flat; side: double;  transparent: true;src: url(img/btn_quiz.png);"></a-entity>
+        <a-entity id="quiz" geometry="primitive: plane; depth: 0; height: 0.7; width: 1.7" position="3 5 0" onclick="window.open('homevr.html',target='_self');" class="clickable" mixin="cube" rotation="0 0 0" scale="1 1 1" material="shader: flat; side: double;  transparent: true;src: url(img/btn_home.png);"></a-entity>
+        
+
+        <a-sky src="Assets/ISS spacewalk_maxresdefault.jpg" rotation="0 0 0"></a-sky>
+    </a-scene>
+
+
+    <script>
+        document.querySelector('#point1').addEventListener('mouseenter', function () {
+           
+            document.querySelector('#point1').setAttribute('visible', 'false');
+            document.querySelector('#point1desc').setAttribute('visible', 'true');
+        });
+
+        document.querySelector('#point1desc').addEventListener('mouseleave', function () {
+
+            document.querySelector('#point1').setAttribute('visible', 'true');
+            document.querySelector('#point1desc').setAttribute('visible', 'false');
+        });
+
+        document.querySelector('#point2').addEventListener('mouseenter', function () {
+
+            document.querySelector('#point2').setAttribute('visible', 'false');
+            document.querySelector('#point2desc').setAttribute('visible', 'true');
+        });
+
+        document.querySelector('#point2desc').addEventListener('mouseleave', function () {
+
+            document.querySelector('#point2').setAttribute('visible', 'true');
+            document.querySelector('#point2desc').setAttribute('visible', 'false');
+        });
+
+        document.querySelector('#point3').addEventListener('mouseenter', function () {
+
+            document.querySelector('#point3').setAttribute('visible', 'false');
+            document.querySelector('#point3desc').setAttribute('visible', 'true');
+        });
+
+        document.querySelector('#point3desc').addEventListener('mouseleave', function () {
+
+            document.querySelector('#point3').setAttribute('visible', 'true');
+            document.querySelector('#point3desc').setAttribute('visible', 'false');
+        });
+        
+    </script>
+
+
+</body>
+</html>

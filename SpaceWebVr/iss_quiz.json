@@ -1,0 +1,52 @@
+﻿[
+  {
+    "id" :  1,
+    "question": "Can you blow a bubble with gum in outer space?",
+    "option1": "TRUE",
+    "option2": "FALSE",
+    "option3": " ",
+    "option4": " ",
+    "answer": "2",
+    "info" :  "In space, there is no pressure. So if you try to blow a bubble in space nothing will happen. The air molecules inside the bubble have nothing to push against so the bubble will pop before it starts to form. The bubble can only exist when there is equal pressure inside and out."
+  },
+  {
+    "id" :  2,
+    "question": "Which is comparable in size to the entire ISS?",
+    "option1": "Tennis court",
+    "option2": "Basketball court",
+    "option3": "NHL ice hockey rink",
+    "option4": "NFL football field",
+    "answer": "4",
+    "info" :  " "
+  },
+  {
+    "id" :  3,
+    "question": "How many space walks have occurred in the 18 years of the ISS?",
+    "option1": "78",
+    "option2": "193",
+    "option3": "341",
+    "option4": "435",
+    "answer": "2",
+    "info" :  " "
+  },
+  {
+    "id" :  4,
+    "question": "How far is the ISS orbit above earth?",
+    "option1": "400 km",
+    "option2": "850 km",
+    "option3": "1500 km",
+    "option4": "2200 km",
+    "answer": "1",
+    "info" :  " "
+  },
+  {
+    "id" :  5,
+    "question": "How fast does the ISS travel?",
+    "option1": "4,250 km/h",
+    "option2": "11,795 km/h",
+    "option3": "19,322 km/h",
+    "option4": "27,596 km/h",
+    "answer": "4",
+    "info" :  " "
+  }
+]
