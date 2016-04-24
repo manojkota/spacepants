@@ -97,6 +97,7 @@
     <Content Include="img\btn_Home.png" />
     <Content Include="img\btn_quiz.png" />
     <Content Include="img\btn_readMe.png" />
+    <Content Include="img\info_Howitworks_thumb.png" />
     <Content Include="img\iss_info1.png" />
     <Content Include="img\iss_info2.png" />
     <Content Include="img\iss_info3.png" />

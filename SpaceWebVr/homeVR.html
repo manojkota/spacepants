@@ -28,6 +28,7 @@
             <img id="btn2hover" src="img/btn2hover.png">
             <img id="btn3" src="img/btn3.png">
             <img id="btn3hover" src="img/btn3.png">
+            <img id="btnInfo" src="img/info_Howitworks_thumb.png">
 
             <img id="vid_Infinity" src="img/newSpace/one.png">
             <img id="vid_MarsCuriosity" src="img/newSpace/two.png">
@@ -76,6 +77,9 @@
         <a-image visible="true" id="aurora" src="#btn3" width="10" height="3" position="2 -4 0" material="shader: flat; side: double;  transparent: true;" onclick="window.open('aurora.html',target='_self')">
             <a-event name="mouseenter" src="#btn3hover"></a-event>
             <a-event name="mouseleave" src="#btn3"></a-event>
+        </a-image>
+
+        <a-image visible="true" id="info" src="#btnInfo" width="15" height="3" position="0 -8 0" material="shader: flat; side: double;  transparent: true;">
         </a-image>
 
 
@@ -180,6 +184,8 @@
             document.querySelector('#page3bt').setAttribute('visible', 'false');
             document.querySelector('#switchForSpace').setAttribute('visible', 'false');
 
+            document.querySelector('#aurora').setAttribute('visible', 'false');
+            document.querySelector('#info').setAttribute('visible', 'false');
             //document.querySelector('#cursor').setAttribute('position', '0 0 0');
             //document.querySelector('#page2-1').setAttribute('rotation', '0 0 0');
             document.querySelector('#camera').emit('levelnone');
@@ -221,6 +227,9 @@
             document.querySelector('#page3bt').setAttribute('visible', 'true');
             document.querySelector('#switchForSpace').setAttribute('visible', 'true');
 
+            document.querySelector('#aurora').setAttribute('visible', 'false');
+            document.querySelector('#info').setAttribute('visible', 'false');
+
         });
 
         document.querySelector('#switchForSpace').addEventListener('click', function () {
@@ -257,6 +266,8 @@
             document.querySelector('#page3-12').setAttribute('visible', 'false');
             document.querySelector('#page3bt').setAttribute('visible', 'false');
             document.querySelector('#switchForSpace').setAttribute('visible', 'false');
+            document.querySelector('#aurora').setAttribute('visible', 'false');
+            document.querySelector('#info').setAttribute('visible', 'false');
 
             //document.querySelector('#cursor').setAttribute('position', '0 0 0');
             //document.querySelector('#page2-1').setAttribute('rotation', '0 0 0');
@@ -296,6 +307,8 @@
             document.querySelector('#page3-12').setAttribute('visible', 'true');
             document.querySelector('#page3bt').setAttribute('visible', 'true');
             document.querySelector('#switchForSpace').setAttribute('visible', 'true');
+            document.querySelector('#aurora').setAttribute('visible', 'false');
+            document.querySelector('#info').setAttribute('visible', 'false');
         });
 
         document.querySelector('#homeBtn').addEventListener('click', function () {
@@ -331,6 +344,9 @@
             document.querySelector('#page3-12').setAttribute('visible', 'false');
             document.querySelector('#page3bt').setAttribute('visible', 'false');
             document.querySelector('#switchForSpace').setAttribute('visible', 'false');
+
+            document.querySelector('#aurora').setAttribute('visible', 'true');
+            document.querySelector('#info').setAttribute('visible', 'true');
         });
 
 
