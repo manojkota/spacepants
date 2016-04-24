@@ -56,8 +56,8 @@
 
         <!-- home page -->
 
-        <a-entity visible="true" id="page1-1" geometry="primitive: plane; height: 0.58; width: 2" position="-1.7 3.5 16" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;" text="text: SPACETREX;"></a-entity>
-        <a-entity visible="true" id="page1-2" geometry="primitive: plane; height: 0.58; width: 2" position="-4 3 14" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: #50e3c2; roughness: 1; metalness: 0" text="text: journey to infinity and beyond;"></a-entity>
+        <a-entity visible="true" id="page1-1" geometry="primitive: plane; height: 0.58; width: 3" position="0.5 3.5 16" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;src:url(img/AppLogo3x_thumb.png);"></a-entity>
+        <a-entity visible="true" id="page1-2" geometry="primitive: plane; height: 0.58; width: 2" position="-4 3 14" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: #9CCAFF; roughness: 1; metalness: 0" text="text: a journey to infinity and beyond;"></a-entity>
 
         <a-entity visible="false" id="page2bt" geometry="primitive: plane; height: 0.58; width: 2" position="-8.4 6.5 14" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: #6294cf;" text="text: EARTH QUEST;"></a-entity>
         <a-entity visible="false" id="page2t" geometry="primitive: plane; height: 0.58; width: 2" position="-11.3 6.8 12" rotation="0 0 0" material="shader: flat; side: double;  transparent: true; color: #f4faff; roughness: 1; metalness: 0" text="text: experience the adventure in space, mars and beyond.;"></a-entity>
@@ -137,7 +137,7 @@
 
 
 
-            <a-entity id="cursor" cursor="fuse: true; maxDistance: 50;" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="shader: flat; color: #ff0000" opacity="1" position="0 0 -2">
+            <a-entity id="cursor" cursor="fuse: true; maxDistance: 50;" geometry="primitive: ring; radiusInner: 0.07; radiusOuter: 0.10" material="shader: flat; color: #ff0000" opacity="1" position="0 0 -2">
                 <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
                 <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
             </a-entity>

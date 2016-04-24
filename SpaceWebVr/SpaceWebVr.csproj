@@ -75,6 +75,7 @@
     <Content Include="css\main.css" />
     <Content Include="home.html" />
     <Content Include="homeVR.html" />
+    <Content Include="img\AppLogo3x_thumb.png" />
     <Content Include="img\aurora_info1.png" />
     <Content Include="img\aurora_info2.png" />
     <Content Include="img\aurora_info3.png" />
