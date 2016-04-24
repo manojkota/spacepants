@@ -26,8 +26,10 @@
         <a-entity id="data" position="0 2.5 -3" rotation="0 -90 0" material="shader: flat; side: double;  transparent: true;src: url(img/test.jpg);" visible="false"></a-entity>-->
         <!-- videosphere -->
         <a-entity class="video" rotation="0 -90 0" geometry="primitive:sphere;radius:5000;" position="0 2.5 20" material="shader:video;src:#bbb;" scale="-1 1 1"></a-entity>
-        <a-entity id="pin1" geometry="primitive: plane; height: 0.18; width: 0.2" position="0 2.5 18" rotation="0 0 0" onclick="window.open('homevr.html',target='_self');" material="shader: flat; side: double;  transparent: true;src: url(img/pin.png);"></a-entity>
+        <!--<a-entity id="pin1" geometry="primitive: plane; height: 0.7; width: 1.7" position="0 2.5 18" rotation="0 0 0" onclick="window.open('homevr.html',target='_self');" material="shader: flat; side: double;  transparent: true;src: url(img/btn_home.png);"></a-entity>-->
         <!--<a-entity id="data" geometry="primitive: plane; height: 1; width: 2" position="-2 2.4 18" rotation="0 0 0" material="shader: flat; side: double;  transparent: true;src: url(img/sample.png);" visible="false"></a-entity>-->
+
+        <a-entity id="home" geometry="primitive: plane; depth: 0; height: 0.7; width: 1.7" position="3 5 10" onclick="window.open('homevr.html',target='_self');" class="clickable" mixin="cube" rotation="0 0 0" scale="1 1 1" material="shader: flat; side: double;  transparent: true;src: url(img/btn_home.png);"></a-entity>
         <!-- Camera -->
         <a-entity id="camera" camera gamepad-controls look-controls position="0 2.2 20" cursor-visible="enabled: false" wasd-controls="enabled: false">
             <a-animation attribute="position" begin="level0" to="0 2.2 -1" dur="0.5"></a-animation>
